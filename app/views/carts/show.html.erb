@@ -1,3 +1,7 @@
+<% if enhanced_cart.length() == 0 %>
+<span class="col-xs-12 alert alert-warning text-center">You have an empty cart. Click <%= link_to 'here', :root %> to add an item.</span>
+<% else %>
+
 <section class="cart-show">
 
   <header class="page-header">
@@ -32,6 +36,7 @@
     </table>
   </div>
 
+  
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -50,3 +55,4 @@
   </div>
 
 </section>
+<% end %>
